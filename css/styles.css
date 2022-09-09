@@ -8,6 +8,9 @@
 }
 
 /* общее на всем доке */
+h1, h2, h3, h4, h5, h6, ul, p {
+  margin: 0;
+}
 body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-text-color);
@@ -20,6 +23,18 @@ a {
   color: var(--title-text-color);
   text-decoration: none;
   font-style: normal;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 /* лого */
@@ -38,6 +53,7 @@ span {
 
 /* списки */
 ul {
+  padding-left: 0;
   list-style: none;
 }
 
@@ -47,6 +63,8 @@ ul {
   line-height: 1.14;
   color: var(--title-text-color);
   letter-spacing: 0.02em;
+
+  padding-top: 32px;
 }
 
 .site-nav-list a:hover,
@@ -63,6 +81,9 @@ ul {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: block;
+
+  padding-top: 32px;
 }
 
 .auth-nav-list a:hover,
@@ -89,6 +110,12 @@ button:focus {
 }
 
 /* герой и кнопка в нем*/
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 200px 15px 280px 15px;
+}
+
 .hero {
   background: var(--bacground-gray-color);
   color: var(--primary-white-color);
@@ -102,9 +129,12 @@ button:focus {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+
+  width: 696px;
+  margin: 0 auto; 
 }
 
-.hero>button {
+.hero button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -112,6 +142,12 @@ button:focus {
   letter-spacing: 0.06em;
   background-color: var(--accent-text-color);
   color: var(--primary-white-color);
+  
+  margin: 30px 0 200px 477px;
+}
+
+.features {
+  margin: 94px 0 94px 0;
 }
 
 /* все h2 */
@@ -121,6 +157,8 @@ button:focus {
   line-height: 1.16;
   text-align: center;
   color: var(--title-text-color);
+
+  margin-bottom: 50px;
 }
 
 /* верхние h3 */
@@ -130,6 +168,20 @@ button:focus {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-profession {
+  margin-top: 94px;
+}
+
+.team-section {
+  margin-top: 94px;
+  padding: 94px 0 94px 0;
+}
+
+.person {
+  margin-bottom: 30px;
 }
 
 /* имена членов команды */
@@ -174,6 +226,14 @@ button:focus {
 /* footer style */
 footer {
   background-color: var(--bacground-gray-color);
+}
+
+.footer {
+  padding: 60px 0 60px 0;
+}
+
+.auth-nav-list-footer {
+  margin-top: 20px;
 }
 
 footer .logo {
