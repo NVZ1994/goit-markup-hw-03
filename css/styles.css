@@ -31,9 +31,11 @@ a {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
 span {
   color: var(--accent-text-color);
 }
+
 /* списки */
 ul {
   list-style: none;
@@ -51,6 +53,7 @@ ul {
 .site-nav-list a:focus {
   color: var(--accent-text-color);
 }
+
 .current {
   color: var(--accent-text-color);
 }
@@ -101,7 +104,7 @@ button:focus {
   letter-spacing: 0.06em;
 }
 
-.hero > button {
+.hero>button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -167,13 +170,16 @@ button:focus {
   line-height: 1.875;
   color: var(--primary-text-color);
 }
+
 /* footer style */
 footer {
   background-color: var(--bacground-gray-color);
 }
+
 footer .logo {
   color: var(--primary-white-color);
 }
+
 .adr-list a {
   font-weight: 400;
   font-size: 14px;
@@ -181,6 +187,7 @@ footer .logo {
   letter-spacing: 0.03em;
   color: var(--address-color);
 }
+
 footer .fact {
   color: var(--primary-white-color);
 }
