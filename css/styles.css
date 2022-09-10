@@ -5,7 +5,12 @@
   --primary-white-color: #ffffff;
   --bacground-gray-color: #2f303a;
   --address-color: rgba(255, 255, 255, 0.6);
+  --secondary-bgr-color: #F5F4FA;
 }
+
+* {
+  outline: 2px solid #f44336;
+} 
 
 /* общее на всем доке */
 h1,
@@ -25,6 +30,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   background-color: var(--primary-white-color);
+  
 }
 
 a {
@@ -36,8 +42,18 @@ a {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  padding: 32px 0;
+  display: block;
+}
+
+.link-list:not(:first-child) {
+  margin-left: 50px;
 }
 
 .section {
@@ -48,7 +64,6 @@ a {
 
 .header {
   padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 /* лого */
@@ -59,6 +74,9 @@ a {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  display: block;
+  margin-right: 93px;
+  padding: 24px 0 25px 0;
 }
 
 span {
@@ -70,6 +88,9 @@ ul {
   padding-left: 0;
   list-style: none;
 }
+.email .phone .fact {
+  display: block;
+}
 
 /* навигация */
 .site-nav-list {
@@ -78,7 +99,14 @@ ul {
   color: var(--title-text-color);
   letter-spacing: 0.02em;
 
-  padding-top: 32px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.nav-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .site-nav-list a:hover,
@@ -95,9 +123,12 @@ ul {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: block;
+  display: flex;
+  margin-left: auto;
+}
 
-  padding-top: 32px;
+.contact-phone {
+  margin-left: 50px;
 }
 
 .auth-nav-list a:hover,
@@ -115,6 +146,9 @@ button {
   cursor: pointer;
   background: var(--primary-white-color);
   color: var(--title-text-color);
+  border-radius: 4px;
+
+  display: block;
 }
 
 button:hover,
@@ -127,7 +161,9 @@ button:focus {
 .wrapper {
   width: 1200px;
   margin: 0 auto;
-  padding: 200px 15px 200px 15px;
+  padding: 200px 237px;
+
+  justify-content: center;
 }
 
 .hero {
@@ -143,8 +179,7 @@ button:focus {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-
-  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .hero button {
@@ -155,11 +190,23 @@ button:focus {
   letter-spacing: 0.06em;
   background-color: var(--accent-text-color);
   color: var(--primary-white-color);
-
-  margin-top: 30px;
 }
 
 /* все h2 */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .section-title {
   font-weight: 700;
   font-size: 36px;
@@ -170,7 +217,21 @@ button:focus {
   margin-bottom: 50px;
 }
 
+.profession {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.profession-item {
+  flex-basis: calc((100%-4*30px)/3)
+}
 /* верхние h3 */
+.title {
+  margin-bottom: 10px;
+}
+
 .feature-list .title {
   font-size: 14px;
   color: var(--title-text-color);
@@ -181,7 +242,16 @@ button:focus {
 }
 
 .feature-list {
- margin-bottom: 94px;
+  margin-bottom: 94px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.feature-item {
+  flex-basis: calc((100%-5*30px)/4)
 }
 
 .person {
@@ -189,6 +259,10 @@ button:focus {
 }
 
 /* имена членов команды */
+.team-section {
+  background-color: var(--secondary-bgr-color);
+}
+
 .members-list .title {
   color: var(--title-text-color);
   font-weight: 500;
@@ -233,25 +307,35 @@ footer {
 }
 
 .footer {
-  padding: 60px 0 60px 0;
+  padding: 60px 15px;
 }
 
 .auth-nav-list-footer {
   margin-top: 20px;
+  display: flex;
 }
 
 footer .logo {
   color: var(--primary-white-color);
 }
 
+
+
 .adr-list a {
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--address-color);
+
+
 }
 
 footer .fact {
   color: var(--primary-white-color);
+  margin-bottom: 100px;
+}
+
+img {
+  display: block;
 }
