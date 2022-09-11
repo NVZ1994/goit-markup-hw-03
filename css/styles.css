@@ -6,12 +6,14 @@
   --bacground-gray-color: #2f303a;
   --address-color: rgba(255, 255, 255, 0.6);
   --secondary-bgr-color: #F5F4FA;
+  --primary-border-color: #ECECEC;
+  --secondary-border-color: #EEEEEE;
 }
 
 /* общее на всем доке */
-/* *{
+ *{
   outline: 2px solid #f44336;
-} */
+} 
 
 img {
   display: block;
@@ -56,6 +58,7 @@ a {
 /* лого */
 .header {
   padding-top: 24px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 
@@ -153,7 +156,26 @@ button {
   cursor: pointer;
   background: var(--primary-white-color);
   color: var(--title-text-color);
+  padding: 6px 22px;
+  border-radius: 4px;
+  display: block;
 }
+.button-section {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-sec {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
 
 button:hover,
 button:focus {
@@ -205,6 +227,7 @@ button:focus {
 
   display: block;
   margin-top: 30px;
+  padding: 10px 32px;
 }
 
 /* все h2 */
@@ -280,8 +303,7 @@ button:focus {
 }
 
 .activities-item {
-  flex-basis: calc((100%-4*30px)/3)
-  }
+  flex-basis: calc((100%-4*30px)/3) }
 
 /* имена членов команды */
 .team-section {
@@ -333,14 +355,21 @@ button:focus {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
+
 /* подпись под картинками в портфолио */
+.work-item {
+  padding: 20px 24px;
+  border: 1px solid var(--secondary-border-color);
+}
 .descr {
   font-size: 16px;
   line-height: 1.875;
   color: var(--primary-text-color);
 }
+
 
 /* footer style */
 footer {
@@ -350,7 +379,7 @@ footer {
 footer .logo {
   color: var(--primary-white-color);
   margin: 0;
-
+  padding: 0;
 }
 
 .adr-list a {
@@ -369,23 +398,20 @@ footer .fact {
   padding: 0;
 }
 
-.section-footer {
-  padding: 0;
-}
-
 .container-footer {
-  display: block;
   padding-top: 60px;
   padding-bottom: 60px;
+  display: block;
 }
 
 .nav-footer {
   display: flex;
   margin-top: 20px;
 }
-.logo-footer {
-  padding: 0;
-}
+
 .footer-email {
   margin: 9px 0;
+}
+.logo-footer {
+  display: flex;
 }
