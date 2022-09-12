@@ -73,7 +73,6 @@ a {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  display: block;
   margin-right: 93px;
   padding: 24px 0 25px 0;
 }
@@ -403,13 +402,9 @@ footer .fact {
 }
 
 .nav-footer {
-  display: flex;
   margin-top: 20px;
 }
 
 .footer-email {
   margin: 9px 0;
-}
-.logo-footer {
-  display: flex;
 }
