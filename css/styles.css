@@ -8,6 +8,9 @@
   --secondary-bgr-color: #F5F4FA;
   --primary-border-color: #ECECEC;
   --secondary-border-color: #EEEEEE;
+  --contacts-color: rgba(117, 117, 117, 1);
+  --member-bcg-color:rgba(255, 255, 255, 1);
+  --portfolio-bcg-color: rgba(245, 244, 250, 1);
 }
 
 /* общее на всем доке */
@@ -46,8 +49,6 @@ body {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  display: flex;
-  align-items: center;
 }
 a {
   color: var(--title-text-color);
@@ -56,8 +57,12 @@ a {
 }
 
 /* лого */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .header {
-  padding-top: 24px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -99,11 +104,13 @@ ul {
   margin-left: 50px;
   padding: 32px 0;
   display: block;
+  color: var(--contacts-color);
 }
 
 .email {
   padding: 32px 0;
   display: block;
+  color: var(--contacts-color);
 }
 
 .nav-link {
@@ -132,7 +139,6 @@ ul {
 }
 
 .auth-nav-list {
-  color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -158,11 +164,16 @@ button {
   color: var(--title-text-color);
   padding: 6px 22px;
   border-radius: 4px;
-  display: block;
+  border: none;
 }
 .button-section {
+  justify-content: center;
   display: flex;
   gap: 8px;
+  margin-bottom: 50px;
+}
+.portfolio-btn {
+ background-color: var(--portfolio-bcg-color);
 }
 
 .btn-sec {
@@ -186,25 +197,19 @@ button:focus {
 /* герой и кнопка в нем*/
 .section-hero {
   background: var(--bacground-gray-color);
-  color: var(--primary-white-color);
-  margin: 0 auto;
-  
-  justify-content: center;
+  padding: 200px 0;
+  text-align: center;
 }
 
 .hero-container {
-  width: 1200px;
+  color: var(--primary-white-color);
   margin: 0 auto;
-  padding: 200px 237px;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
 }
 
-
-
 .hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -212,20 +217,16 @@ button:focus {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-
-  display: block;
 }
 
 .hero-container > button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  text-align: center;
   letter-spacing: 0.06em;
   background-color: var(--accent-text-color);
   color: var(--primary-white-color);
 
-  display: block;
   margin-top: 30px;
   padding: 10px 32px;
 }
@@ -275,6 +276,9 @@ button:focus {
   gap: 30px;
   justify-content: center;
   flex-wrap: nowrap;
+}
+.features-descr {
+  line-height: 1.7;
 }
 
 .person {
@@ -331,7 +335,9 @@ button:focus {
 }
 
 .member-item {
-  flex-basis: calc((100%-5*30px)/4)
+  flex-basis: calc((100%-5*30px)/4);
+  background-color: var(--member-bcg-color);
+
 }
 
 /* должность */
@@ -339,6 +345,7 @@ button:focus {
   font-size: 16px;
   line-height: 1.1875;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 /* подписи к фото на портфолио */
@@ -363,6 +370,7 @@ button:focus {
 .work-item {
   padding: 20px 24px;
   border: 1px solid var(--secondary-border-color);
+  border-top: none;
 }
 .descr {
   font-size: 16px;
@@ -374,6 +382,8 @@ button:focus {
 /* footer style */
 footer {
   background-color: var(--bacground-gray-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 footer .logo {
@@ -395,14 +405,10 @@ footer .fact {
 }
 
 .section-footer {
-  padding: 0;
+  padding: 60px 0;
 }
 
-.container-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  display: block;
-}
+
 
 .nav-footer {
   display: flex;
